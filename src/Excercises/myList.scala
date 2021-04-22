@@ -162,6 +162,11 @@ object ListTest extends App{
   println(myStringList.zipwith[Int,String](myInstList1, _ +"-" + _ ))
   println(myInstList1.fold[Int](0)(_ + _))      // x:Int,y:Int)=>x+y
 
+  val ForCheckInMYList = for{
+    n1 <- myInstList
+    houses <-myStringList
+  } yield ""+n1+houses
+  println(ForCheckInMYList)
 
 }
 
